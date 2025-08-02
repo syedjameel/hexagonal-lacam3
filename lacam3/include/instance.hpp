@@ -17,13 +17,17 @@ struct Instance {
   Instance(Graph *_G, const Config &_starts, const Config &_goals, uint _N);
   Instance(const std::string &map_filename,
            const std::vector<int> &start_indexes,
-           const std::vector<int> &goal_indexes);
+           const std::vector<int> &goal_indexes,
+           GridType grid_type = GridType::SQUARE,
+           HexConfig hex_config = HexConfig::ODD_ROW);
   // for MAPF benchmark
   Instance(const std::string &scen_filename, const std::string &map_filename,
-           const int _N = 1);
+           const int _N = 1, GridType grid_type = GridType::SQUARE,
+           HexConfig hex_config = HexConfig::ODD_ROW);
   // random instance generation
   Instance(const std::string &map_filename, const int _N = 1,
-           const int seed = 0);
+           const int seed = 0, GridType grid_type = GridType::SQUARE,
+           HexConfig hex_config = HexConfig::ODD_ROW);
   ~Instance();
 
   // simple feasibility check of instance

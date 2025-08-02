@@ -4,6 +4,18 @@
 #pragma once
 #include "utils.hpp"
 
+enum class GridType {
+  SQUARE,
+  HEX
+};
+
+enum class HexConfig {
+  ODD_ROW,
+  EVEN_ROW,
+  ODD_COLUMN,
+  EVEN_COLUMN
+};
+
 struct Vertex {
   const int id;     // index for V in Graph
   const int index;  // index for U (width * y + x) in Graph
@@ -23,8 +35,12 @@ struct Graph {
   Vertices U;  // with nullptr, i.e., |U| = width * height
   int width;   // grid width
   int height;  // grid height
+  GridType grid_type;
+  HexConfig hex_config;
+  
   Graph();
-  Graph(const std::string &filename);  // taking map filename
+  Graph(const std::string &filename, GridType gt = GridType::SQUARE,
+        HexConfig hc = HexConfig::ODD_ROW);  // taking map filename
   ~Graph();
 
   int size() const;  // the number of vertices, |V|

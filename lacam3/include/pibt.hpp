@@ -26,7 +26,7 @@ struct PIBT {
   const int NO_AGENT;
   std::vector<int> occupied_now;                // for quick collision checking
   std::vector<int> occupied_next;               // for quick collision checking
-  std::vector<std::array<Vertex *, 5>> C_next;  // next location candidates
+  std::vector<std::array<Vertex *, 7>> C_next;  // next location candidates
   std::vector<float> tie_breakers;              // random values, used in PIBT
 
   // swap, used in the LaCAM* paper

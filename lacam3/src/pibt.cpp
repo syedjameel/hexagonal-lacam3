@@ -10,7 +10,7 @@ PIBT::PIBT(const Instance *_ins, DistTable *_D, int seed, bool _flg_swap,
       NO_AGENT(N),
       occupied_now(V_size, NO_AGENT),
       occupied_next(V_size, NO_AGENT),
-      C_next(N, std::array<Vertex *, 5>()),
+      C_next(N, std::array<Vertex *, 7>()),
       tie_breakers(V_size, 0),
       flg_swap(_flg_swap),
       scatter(_scatter)
