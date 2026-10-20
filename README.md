@@ -1,7 +1,9 @@
 # lacam3
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-[![CI](https://github.com/Kei18/lacam3/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Kei18/lacam3/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23476002.svg)](https://doi.org/10.5281/zenodo.23476002)
+
+> **Hexagonal LaCAM3.** This repository is a modified version of [Kei18/lacam3](https://github.com/Kei18/lacam3) by Keisuke Okumura, the code of the paper "Engineering LaCAM*: Towards Real-Time, Large-Scale, and Near-Optimal Multi-Agent Pathfinding" (AAMAS-24). It adds hexagonal grids (odd-row, even-row, odd-column and even-column layouts) to the original square grids. Version 1.0.0 is archived on Zenodo: [10.5281/zenodo.23476002](https://doi.org/10.5281/zenodo.23476002). If you use it, please cite both the original paper and this archive (see [CITATION.cff](CITATION.cff)).
 
 This is a code repository of the paper ["Engineering LaCAM*: Towards Real-Time, Large-Scale, and Near-Optimal Multi-Agent Pathfinding"](https://kei18.github.io/lacam3/) (AAMAS-24).
 Now supports both square and hexagonal grids!
@@ -41,7 +43,7 @@ The code is written in C++(17).
 First, clone this repo with submodules.
 
 ```sh
-git clone --recursive https://github.com/Kei18/lacam3.git && cd lacam3
+git clone --recursive https://github.com/syedjameel/hexagonal-lacam3.git && cd hexagonal-lacam3
 ```
 
 Then, build the project.
